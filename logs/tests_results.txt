@@ -1,10 +1,27 @@
 test_average (__main__.TestExercice) ... ok
 test_square (__main__.TestExercice) ... ok
-test_square_root (__main__.TestExercice) ... ok
+test_square_root (__main__.TestExercice) ... FAIL
 test_to_celsius (__main__.TestExercice) ... FAIL
 test_to_degrees (__main__.TestExercice) ... FAIL
 test_to_farenheit (__main__.TestExercice) ... FAIL
 test_to_radians (__main__.TestExercice) ... FAIL
+
+======================================================================
+FAIL: test_square_root (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 22, in test_square_root
+    'Mauvais calcul de la racine carré'
+AssertionError: Lists differ: [<module 'math' (built-in)>, <module 'math[37 chars]in)>] != [3.4641016151377544, 14.142135623730951, 4.47213595499958]
+
+First differing element 0:
+<module 'math' (built-in)>
+3.4641016151377544
+
++ [3.4641016151377544, 14.142135623730951, 4.47213595499958]
+- [<module 'math' (built-in)>,
+-  <module 'math' (built-in)>,
+-  <module 'math' (built-in)>] : Mauvais calcul de la racine carré
 
 ======================================================================
 FAIL: test_to_celsius (__main__.TestExercice)
@@ -70,6 +87,6 @@ First differing element 0:
 + [-0.08668468618238503, 0.17598251810595048, 6.283490739798685, 6.9973449482748] : Mauvais calcul de degres -> radians
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.001s
+Ran 7 tests in 0.002s
 
-FAILED (failures=4)
+FAILED (failures=5)
